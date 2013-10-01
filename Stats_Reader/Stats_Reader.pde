@@ -32,7 +32,7 @@ void draw(){
 }
 
 public class qualiaReceiver extends Thread{
-  public float avg_Mood, avg_Sentiment, avg_Visitors_24h, avg_Mood_24h, avg_Sentiment_24;
+  public float avg_Mood, avg_Sentiment, avg_Visitors_24h, avg_Mood_24h, avg_Sentiment_24h;
   public int num_Visitors, num_Points, num_Attendances, num_Feedbacks, num_SocialMedia, num_Hotspots;
   public int num_Attendances_24h, num_Feedbacks_24h, num_SocialMedia_8h, num_Points_12h, num_Hotspots_12h;
   private String API_KEY, USER, request;
