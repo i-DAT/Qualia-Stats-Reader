@@ -32,11 +32,11 @@ void draw(){
 }
 
 public class qualiaReceiver extends Thread{
-  public float avg_Mood, avg_Sentiment;
+  public float avg_Mood, avg_Sentiment, avg_Visitors_24h, avg_Mood_24h, avg_Sentiment_24;
   public int num_Visitors, num_Points, num_Attendances, num_Feedbacks, num_SocialMedia, num_Hotspots;
+  public int num_Attendances_24h, num_Feedbacks_24h, num_SocialMedia_8h, num_Points_12h, num_Hotspots_12h;
   private String API_KEY, USER, request;
   private Boolean updated;
-  
   private boolean running;
   private int wait;
   
@@ -69,6 +69,15 @@ public class qualiaReceiver extends Thread{
     num_Feedbacks = json.getInt("num_Feedbacks");
     num_SocialMedia = json.getInt("num_SocialMedia");
     num_Hotspots = json.getInt("num_Hotspots");
+    
+    avg_Visitors_24h = json.getFloat("avg_Visitors_24h");
+    num_Attendances_24h = json.getInt("num_Attendances_24h");
+    num_Feedbacks_24h = json.getInt("num_Feedbacks_24h");
+    num_SocialMedia_8h = json.getInt("num_SocialMedia_8h");
+    num_Points_12h = json.getInt("num_Points_12h");
+    num_Hotspots_12h = json.getInt("num_Hotspots_12h");
+    avg_Mood_24h = json.getFloat("avg_Mood_24h");
+    avg_Sentiment_24h = json.getFloat("avg_Sentiment_24h");
     
     updated = true;
   }
